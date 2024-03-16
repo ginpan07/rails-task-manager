@@ -1,0 +1,14 @@
+<h1>Show one task</h1>
+
+<h2><%= @tasks.title %></h2>
+<p><%= @tasks.details %></p>
+<!-- <p><%= @tasks.completed %></p> -->
+
+<%if @tasks.completed == true%>
+<p>The task is done.</p>
+<%elsif @tasks.completed == false %>
+<p>The task is not done</p>
+<%end%>
+
+<%= link_to("Back to all tasks", tasks_path) %>
+<%= link_to("Edit", edit_path) %>
